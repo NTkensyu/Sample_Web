@@ -1,0 +1,40 @@
+.bg_test_1 {
+    background-image: url("images/bg_Argyle.jpg"); /* 背景画像を追加するやつ */
+}
+.mannaka {
+        text-align: center;
+}
+/* 真ん中にするやつ */
+li{
+list-style-type: circle;
+}
+/* 黒丸を変更するやつ */
+
+.koyume span{
+    font-weight: bold;
+}
+/* 文字を濃く */
+.mid {
+    text-align:center;
+}
+/* 画像を真ん中に */
+
+.mid img{
+    border:5px double #d48048;
+}
+/*画像に枠線をつける*/
+
+.pink {
+    color:pink;
+}
+/* 文字の色を変える*/
+
+.zenbu {
+    background-color: #dfdeb1;
+    border-color: #e07873;
+}
+/* 図の背景と線の色変更*/
+
+.box {
+    display: flex;
+}

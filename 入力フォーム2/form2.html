@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>アンケートフォーム</title>
+<h1 style="text-align:center; color:#45a049; padding:10px; margin-bottom:20px;">アンケート</h1>
+<style>
+  body {
+        font-family: Arial, sans-serif;
+        background-color: #e0ffff;
+  }
+  .akairo {
+      color:#f0ffff;
+      background-color:red;
+      border-radius:5px;
+  }
+
+  .container {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #f0ffff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  input[type=text], input[type=email], select, textarea {
+        width: 100%;
+        padding: 12px;
+        margin: 6px 0 12px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+  }
+  input[type=radio], input[type=checkbox] {
+        margin-right: 10px;
+  }
+  label {
+        display: block;
+        margin-top: 20px;
+  }
+  .submit {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+  }
+  .submit:hover {
+        background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <form action="/submit_form" method="post">
+        <p>AxiZの研修をご利用いただき、誠にありがとうございます。</p>
+        <p>以下の内容の記入及び送信をして頂けると幸いです。</p>
+        <label for="社名">会社名<span class="akairo">必須</span></label>
+        <input type="text" id="name" name="name" placeholder="例）株式会社テクノコア" required>
+        <label for="name">お名前<span class="akairo">必須</span></label>
+        <input type="text" id="name" name="name" placeholder="例）手久野 興亜" required>
+        <label for="email">メールアドレス</label>
+        <input type="email" id="email" name="email" placeholder="例）example@axiz.co.jp">
+        <label for="age">年齢:</label>
+        <input type="number" id="age" name="age" min="0" max="100" placeholder="23">  
+      <p>
+        <label class="a" style="display: inline-block; margin-right: 20px;">
+        <input type="radio" name="gender" value="Java" checked>Java
+        </label>
+        <label class="a" style="display: inline-block;">
+        <input type="radio" name="gender" value="インフラ" >インフラ
+        </label>
+        </p>
+        
+        <label for="1">会場</label>
+        <select id="1" name="1">
+        <option>日本橋A教室</option>
+
+    <p>詳しく学びたい内容(複数回答可)</p>
+
+    <label for="option1">
+        <input type="checkbox" id="option1" name="interests" value="ビジネスマナー">
+        ビジネスマナー
+        </label>
+        <label for="option2">
+        <input type="checkbox" id="option2" name="interests" value="HTML/CSS">
+        HTML/CSS
+        </label>
+        <label for="option3">
+        <input type="checkbox" id="option3" name="interests" value="JavaScript">
+        JavaScript
+        </label>
+        <label for="option4">
+        <input type="checkbox" id="option4" name="interests" value="Java">
+        Java
+        </label>
+        <label for="option5">
+        <input type="checkbox" id="option5" name="interests" value="データベース">
+        データベース
+        </label>
+        <label for="option6">
+        <input type="checkbox" id="option6" name="interests" value="Linux">
+        Linux
+      </label>
+        <label for="comments">ご意見</label>
+        <textarea id="comments" name="comments" style="height:100px">自由にご記入ください</textarea>
+        <input type="submit" value="送信する" class="submit">
+</body>
+</html>
